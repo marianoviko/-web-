@@ -84,20 +84,26 @@ function sum (x){
 console.log(sum(range(5, 2, -1)));
 
 
-console.log('задание 7');
+console.log('задание 7')
 function reverseArray(array){
-	new_array = []
-	for(let i = array.length - 1; i >= 0; i--){
-		new_array.push(array[i]);
-	}
-	return new_array;
-}
-console.log('Функция reverseArray:', reverseArray([7, 8, 9, 10]));
-function reverseArrayInPlace(array){
-	for (var i = 0; i < parseInt(arr.length / 2) ; i++) {
-    var temp = array[i];
-    array[i] = array[array.length - i - 1];
-    array[array.length - в i - 1] = temp ;
-  }
-}
-console.log('Функция reverseAreverseArrayInPlacerray:', reverseArray([7, 8, 9, 10]));
+    var newArray1 = [];
+    for (var i = array.length; i > 0; i--){
+        newArray1.push(array.pop());
+    }
+    return newArray1;
+};
+  
+function reverseArrayInPlace(array){  // Первая часть функции аналогична reverseArray()
+    var newArray2 = [];
+    for (var i = array.length; i > 0; i--){
+        newArray2.push(array.pop());  // pop позволяет удалить последний элемент из массива и возвратить его значение
+    }
+    for (var j = newArray2.length; j > 0; j--){
+        array.unshift(newArray2.pop());   // unshift добавляет элементы в начало массива
+    }
+    return array;
+};
+console.log('Reverse of [1, 2, 3] by reverseArray: '+reverseArray([1, 2, 3]));
+var array3 = [1, 2, 3]; 
+console.log('Reverse of array3=[1, 2, 3] by reverseArrayInPlace: '+reverseArrayInPlace(array3));
+
