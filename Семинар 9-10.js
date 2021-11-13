@@ -1,11 +1,11 @@
-//Задание 1
-console.log('-----Задание 1-------')
+
+console.log('задание 1')
 for (let i = 1; i < 8; i++){
 	console.log('#'.repeat(i));
 }
 
-console.log('-----Задание 2-------')
-//Задание 2
+console.log('задание 2')
+
 for (let i = 1; i < 101; i++){
 	if ((i % 3 == 0) && (i%5 == 0)){
 		console.log('FizzBuzz');
@@ -20,8 +20,8 @@ for (let i = 1; i < 101; i++){
 		console.log(i);
 	}
 }
-//Задание 3
-console.log('-----Задание 3-------')
+
+console.log('задание 3')
 var result = "\n";
 for (var row = 1; row <= 8; row++) {
   for (var cell = 1; cell <= 8; cell++) {
@@ -31,15 +31,15 @@ for (var row = 1; row <= 8; row++) {
 }
 console.log(result);
 
-//Задание 4
-console.log('-----Задание 4-------')
+
+console.log('задание 4')
 function min(a, b){
 	return (a < b) ? a : b;
 }
 
 console.log(min(4,1));
-//Задание 5
-console.log('-----Задание 5-------')
+
+console.log('задание 5')
 function countBs(str){
 	let kol = 0;
 	for (i = 0; i < str.length; i++){
@@ -61,8 +61,9 @@ function countChar(str, char){
 	return kol;
 }
 console.log(countChar('abcd','d'));
-//Задание 6
-console.log('-----Задание 6-------')
+
+
+console.log('задание 6')
 function range(a, b, shag = 1){
 	let array = [];
 	if (shag > 0){
@@ -88,8 +89,9 @@ function sum (x){
 }
 
 console.log(sum(range(5, 2, -1)));
-//Задание 7
-console.log('-----Задание 7-------');
+
+
+console.log('задание 7');
 function reverseArray(array){
 	new_array = []
 	for(let i = array.length - 1; i >= 0; i--){
