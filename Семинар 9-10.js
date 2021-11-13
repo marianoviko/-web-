@@ -57,31 +57,31 @@ countBs('There are two a in this str', 'a');
 
 
 console.log('задание 6')
-function range(a, b, shag = 1){
-	let array = [];
-	if (shag > 0){
-		for (let i = a; i < b + 1; i += shag){
-			array.push(i);
-		}
-	}
-	else {
-		for (let i = a; i > b-1; i += shag){
-			array.push(i);
-		}
-	}	
-	console.log(array);
-	return array;
+function range(start, end, step) {
+    var i = start,  
+    arr = [];
+    if (!step) {  
+        step = 1
+    }
+    if (step < 0) {
+        start = end; 
+        end = i;
+    }
+    for (; i >= start && i <= end; i += step) {  // Переменнаяя уже объявлена
+        arr.push(i); 
+    }
+    return arr;
 }
 
-function sum (x){
-   var s = 0;
-   for (i = 0; i < x.length; i++){
-      s += x[i];
-   }
-   return s;
+function sum(arr) {
+    var counter = arr[0];
+    for (var i = arr[0]; i < arr.length; i++) {
+        counter += arr[i];
+    }
+    return counter
 }
-
-console.log(sum(range(5, 2, -1)));
+console.log('Sum of the range(1, 10): '+sum(range(1, 10)));
+console.log('Range (5, 2, -1): '+range(5, 2, -1));
 
 
 console.log('задание 7')
@@ -93,13 +93,13 @@ function reverseArray(array){
     return newArray1;
 };
   
-function reverseArrayInPlace(array){  // Первая часть функции аналогична reverseArray()
+function reverseArrayInPlace(array){ 
     var newArray2 = [];
     for (var i = array.length; i > 0; i--){
-        newArray2.push(array.pop());  // pop позволяет удалить последний элемент из массива и возвратить его значение
+        newArray2.push(array.pop()); 
     }
     for (var j = newArray2.length; j > 0; j--){
-        array.unshift(newArray2.pop());   // unshift добавляет элементы в начало массива
+        array.unshift(newArray2.pop());  
     }
     return array;
 };
