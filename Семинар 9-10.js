@@ -40,27 +40,20 @@ function min(a, b){
 console.log(min(4,1));
 
 console.log('задание 5')
-function countBs(str){
-	let kol = 0;
-	for (i = 0; i < str.length; i++){
-		if (str.charAt(i) == 'B'){
-			kol += 1;
-		}
-	}
-	return kol;
+function countBs(str, char) {
+    let count = 0;
+    for(let i = 0; i <= (str.length - 1); i++){
+        if(str.charAt(i) == char) {
+            ++count;
+        } 
+    }
+    return console.log(`\nString: ${str} 
+    \nSymbol: ${char} 
+    \nNumber of this type of symb in the str: ${count} `);
 }
-console.log(countBs('dygywuedBBBB'));
+countBs('There are two a in this str', 'a');
 
-function countChar(str, char){
-	let kol = 0;
-	for (i = 0; i <str.length; i++){
-		if (str.charAt(i) == char){
-			kol += 1;
-		}
-	}
-	return kol;
-}
-console.log(countChar('abcd','d'));
+
 
 
 console.log('задание 6')
@@ -104,7 +97,7 @@ function reverseArrayInPlace(array){
 	for (var i = 0; i < parseInt(arr.length / 2) ; i++) {
     var temp = array[i];
     array[i] = array[array.length - i - 1];
-    array[array.length - i - 1] = temp ;
+    array[array.length - в i - 1] = temp ;
   }
 }
 console.log('Функция reverseAreverseArrayInPlacerray:', reverseArray([7, 8, 9, 10]));
